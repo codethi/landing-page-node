@@ -12,7 +12,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/index", (req, res) => {
-  res.render("index");
+  const devList = ["Backend", "Frontend", "Fullstack"];
+  const analyticsList = ["Engenharia de dados", "Ciência de dados"];
+  res.render("index", { titulo: "Blue", devList: devList, analyticsList: analyticsList});
 });
 
 app.listen(port, () =>
